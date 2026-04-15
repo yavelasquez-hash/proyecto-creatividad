@@ -14,21 +14,17 @@
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
     <div class="container-fluid px-4">
 
-      <!-- Logo -->
       <a class="navbar-brand fw-bold fs-4" href="#">
         <i class="bi bi-tools me-2"></i>BricoMax
       </a>
 
-      <!-- Hamburguesa mobile -->
       <button class="navbar-toggler" type="button"
         data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Menú de categorías -->
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav mx-auto gap-1">
-
           <li class="nav-item">
             <a class="nav-link category-link" href="#" data-category="herramientas">
               <i class="bi bi-wrench-adjustable me-1"></i>Herramientas
@@ -64,30 +60,71 @@
               <i class="bi bi-shield-check me-1"></i>Seguridad
             </a>
           </li>
-
         </ul>
 
-        <!-- Carrito -->
+        <!-- Botón carrito -->
         <button class="btn btn-cart position-relative ms-3" id="cartBtn">
           <i class="bi bi-cart3 fs-5"></i>
           <span class="badge cart-badge" id="cartCount">0</span>
         </button>
-
       </div>
     </div>
   </nav>
   <!-- ===== FIN NAVBAR ===== -->
 
-  <!-- Sección de productos (se llena con app.js) -->
+
+  <!-- ===== PRODUCTOS ===== -->
   <main class="container-fluid px-4 py-4" id="productsSection">
     <h5 class="section-title mb-4" id="categoryTitle">Todos los productos</h5>
     <div class="row g-4" id="productsGrid">
-      <!-- Las tarjetas se renderizan desde app.js -->
+      <!-- Tarjetas renderizadas por app.js -->
     </div>
   </main>
 
+
+  <!-- ===== MODAL CARRITO ===== -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="cartModalLabel">
+            <i class="bi bi-cart3 me-2"></i>Carrito de compras
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Body: lista de productos -->
+        <div class="modal-body" id="cartModalBody">
+          <!-- Renderizado por cartModal.js -->
+        </div>
+
+        <!-- Footer: total + acciones -->
+        <div class="modal-footer d-flex justify-content-between align-items-center">
+          <div>
+            <span class="text-muted me-2">Total:</span>
+            <span class="fs-5 fw-bold" id="cartTotal">$0</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-danger btn-sm" onclick="clearCart()">
+              <i class="bi bi-trash me-1"></i>Vaciar
+            </button>
+            <button class="btn btn-success btn-sm">
+              <i class="bi bi-credit-card me-1"></i>Finalizar compra
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- ===== FIN MODAL ===== -->
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/cartModal.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
