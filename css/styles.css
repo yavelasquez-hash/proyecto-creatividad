@@ -1,0 +1,162 @@
+/* ============================================================
+   styles.css — BricoMax Ecommerce
+   ============================================================ */
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --brand-primary:   #e85d04;
+  --brand-dark:      #1a1a2e;
+  --brand-light:     #f8f4ef;
+  --text-main:       #1a1a2e;
+  --text-muted:      #6b7280;
+  --card-radius:     12px;
+  --shadow-card:     0 2px 12px rgba(0,0,0,.08);
+  --font-display:    'Georgia', serif;
+}
+
+body {
+  background-color: var(--brand-light);
+  color: var(--text-main);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+#mainNav {
+  background-color: var(--brand-dark);
+  border-bottom: 3px solid var(--brand-primary);
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  letter-spacing: .5px;
+  font-family: var(--font-display);
+}
+
+.navbar-brand i { color: var(--brand-primary); }
+
+.nav-link.category-link {
+  color: rgba(255,255,255,.75) !important;
+  font-size: .85rem;
+  font-weight: 500;
+  padding: .4rem .8rem !important;
+  border-radius: 6px;
+  transition: background .2s, color .2s;
+}
+
+.nav-link.category-link:hover,
+.nav-link.category-link.active {
+  color: #fff !important;
+  background-color: var(--brand-primary);
+}
+
+/* ── Botón carrito ──────────────────────────────────────────── */
+.btn-cart {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,.35);
+  border-radius: 8px;
+  padding: .3rem .7rem;
+  transition: border-color .2s, background .2s;
+}
+
+.btn-cart:hover { background: var(--brand-primary); border-color: var(--brand-primary); }
+
+.cart-badge {
+  background-color: var(--brand-primary);
+  font-size: .65rem;
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+/* ── Título de sección ──────────────────────────────────────── */
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--brand-dark);
+  border-left: 4px solid var(--brand-primary);
+  padding-left: .75rem;
+}
+
+/* ── Tarjeta de producto ────────────────────────────────────── */
+.product-card {
+  border: none;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-card);
+  background: #fff;
+  transition: transform .2s, box-shadow .2s;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+.product-card-header {
+  background-color: var(--brand-dark);
+  color: #fff;
+  padding: .65rem 1rem;
+  font-size: .85rem;
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0ece6;
+}
+
+.product-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+/* ── Controles de cantidad ──────────────────────────────────── */
+.qty-controls { flex-wrap: wrap; }
+
+.btn-qty {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  line-height: 1;
+  border: 1.5px solid #d1cdc7;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 1rem;
+  color: var(--brand-dark);
+  transition: background .15s, border-color .15s;
+}
+
+.btn-qty:hover {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #fff;
+}
+
+.qty-display {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+/* ── Botón agregar al carrito ───────────────────────────────── */
+.btn-add-cart {
+  background-color: var(--brand-primary);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .35rem .75rem;
+  transition: opacity .2s;
+}
+
+.btn-add-cart:hover   { opacity: .85; color: #fff; }
+.btn-add-cart:disabled { opacity: .6; }

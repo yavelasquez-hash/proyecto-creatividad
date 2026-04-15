@@ -14,12 +14,12 @@
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
     <div class="container-fluid px-4">
 
-      <!-- Logo / Nombre -->
+      <!-- Logo -->
       <a class="navbar-brand fw-bold fs-4" href="#">
         <i class="bi bi-tools me-2"></i>BricoMax
       </a>
 
-      <!-- Botón hamburguesa (mobile) -->
+      <!-- Hamburguesa mobile -->
       <button class="navbar-toggler" type="button"
         data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
@@ -30,41 +30,35 @@
         <ul class="navbar-nav mx-auto gap-1">
 
           <li class="nav-item">
-            <a class="nav-link category-link active" href="#" data-category="herramientas">
+            <a class="nav-link category-link" href="#" data-category="herramientas">
               <i class="bi bi-wrench-adjustable me-1"></i>Herramientas
             </a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link category-link" href="#" data-category="electricidad">
               <i class="bi bi-lightning-charge me-1"></i>Electricidad
             </a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link category-link" href="#" data-category="fontaneria">
               <i class="bi bi-droplet me-1"></i>Fontanería
             </a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link category-link" href="#" data-category="pintura">
               <i class="bi bi-brush me-1"></i>Pintura
             </a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link category-link" href="#" data-category="madera">
               <i class="bi bi-tree me-1"></i>Madera
             </a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link category-link" href="#" data-category="jardineria">
               <i class="bi bi-flower1 me-1"></i>Jardinería
             </a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link category-link" href="#" data-category="seguridad">
               <i class="bi bi-shield-check me-1"></i>Seguridad
@@ -73,7 +67,7 @@
 
         </ul>
 
-        <!-- Carrito (siempre visible a la derecha) -->
+        <!-- Carrito -->
         <button class="btn btn-cart position-relative ms-3" id="cartBtn">
           <i class="bi bi-cart3 fs-5"></i>
           <span class="badge cart-badge" id="cartCount">0</span>
@@ -84,9 +78,9 @@
   </nav>
   <!-- ===== FIN NAVBAR ===== -->
 
-  <!-- Contenedor de productos (se llena con JS) -->
+  <!-- Sección de productos (se llena con app.js) -->
   <main class="container-fluid px-4 py-4" id="productsSection">
-    <h5 class="section-title mb-4" id="categoryTitle">Herramientas</h5>
+    <h5 class="section-title mb-4" id="categoryTitle">Todos los productos</h5>
     <div class="row g-4" id="productsGrid">
       <!-- Las tarjetas se renderizan desde app.js -->
     </div>
