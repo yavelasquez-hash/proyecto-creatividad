@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "name": "Martillo de Carpintero 500g",
+    "category": "herramientas",
+    "description": "Martillo de acero forjado con mango ergonómico antideslizante. Ideal para clavar y extraer clavos.",
+    "price": 18500,
+    "image": "assets/images/martillo.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Juego de Destornilladores x6",
+    "category": "herramientas",
+    "description": "Set de 6 destornilladores (plano y estrella) con puntas magnéticas y mangos bimateria.",
+    "price": 32000,
+    "image": "assets/images/destornilladores.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Taladro Percutor 700W",
+    "category": "herramientas",
+    "description": "Taladro eléctrico con función percusión, velocidad variable y mandril de 13mm. Incluye maletín.",
+    "price": 189000,
+    "image": "assets/images/taladro.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Nivel Láser Autonivelante",
+    "category": "herramientas",
+    "description": "Proyecta líneas horizontales y verticales con precisión de ±0.3mm/m. Alcance 15 metros.",
+    "price": 95000,
+    "image": "assets/images/nivel-laser.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Cable Eléctrico THW 12 AWG (rollo 100m)",
+    "category": "electricidad",
+    "description": "Cable de cobre sólido calibre 12 AWG con aislamiento PVC 600V. Rollo de 100 metros.",
+    "price": 145000,
+    "image": "assets/images/cable-thw.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Tablero Eléctrico 12 Circuitos",
+    "category": "electricidad",
+    "description": "Caja distribución con barra de neutros y tierra, para 12 breakers. Incluye puerta metálica.",
+    "price": 87000,
+    "image": "assets/images/tablero.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Toma Corriente Doble con USB",
+    "category": "electricidad",
+    "description": "Tomacorriente dual 110V/15A con 2 puertos USB integrados de 2.1A. Fácil instalación.",
+    "price": 28000,
+    "image": "assets/images/tomacorriente.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Multímetro Digital Auto-rango",
+    "category": "electricidad",
+    "description": "Mide voltaje AC/DC, corriente, resistencia y continuidad. Pantalla retroiluminada.",
+    "price": 54000,
+    "image": "assets/images/multimetro.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Llave Inglesa Ajustable 10\"",
+    "category": "fontaneria",
+    "description": "Llave ajustable de acero cromo-vanadio, apertura máxima 30mm. Acabado pulido anticorrosión.",
+    "price": 22000,
+    "image": "assets/images/llave-inglesa.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Juego de Llaves para Tuberías",
+    "category": "fontaneria",
+    "description": "Set de 3 llaves stilson (10\", 14\", 18\") para tuberías de hasta 2 pulgadas de diámetro.",
+    "price": 68000,
+    "image": "assets/images/llaves-tuberia.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Cinta Teflón x10 unidades",
+    "category": "fontaneria",
+    "description": "Cinta PTFE de 12mm x 10m. Sello hermético para roscas de tuberías de agua y gas.",
+    "price": 12000,
+    "image": "assets/images/teflon.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Flexible de Ducha 1.5m",
+    "category": "fontaneria",
+    "description": "Flexible cromado con conexiones universales 1/2\". Alta resistencia a la presión y doblado.",
+    "price": 19500,
+    "image": "assets/images/flexible-ducha.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Pintura Vinílica Blanco Mate 4L",
+    "category": "pintura",
+    "description": "Pintura para interiores de alta cubrición. Rendimiento aprox. 10m²/L en dos manos. Lavable.",
+    "price": 48000,
+    "image": "assets/images/pintura-blanca.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Rodillo de Lana 23cm + Bandeja",
+    "category": "pintura",
+    "description": "Kit rodillo de lana corta para superficies lisas. Incluye bandeja plástica con rejilla.",
+    "price": 21000,
+    "image": "assets/images/rodillo.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Brocha Profesional x3",
+    "category": "pintura",
+    "description": "Set de brochas (1\", 2\", 3\") con cerdas naturales. Mango de madera barnizado.",
+    "price": 15000,
+    "image": "assets/images/brochas.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Lija en Pliego Grano 120 x10",
+    "category": "pintura",
+    "description": "Pack 10 pliegos de lija al agua grano 120. Apta para madera, metal y masilla.",
+    "price": 9800,
+    "image": "assets/images/lija.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Tablón de Pino 2x10x240cm",
+    "category": "madera",
+    "description": "Tablón de madera pino pátula cepillada, seca al horno. Ideal para muebles y estructuras.",
+    "price": 35000,
+    "image": "assets/images/tablon-pino.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Triplay Fenólico 15mm 122x244cm",
+    "category": "madera",
+    "description": "Lámina de triplay con cara fenólica resistente a humedad. Uso en encofrado y pisos.",
+    "price": 125000,
+    "image": "assets/images/triplay.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Pegamento para Madera 500ml",
+    "category": "madera",
+    "description": "Cola vinílica de alta resistencia para uniones de madera. Tiempo de fraguado 30 min.",
+    "price": 16500,
+    "image": "assets/images/cola-madera.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Bisagras Ocultas x10 unidades",
+    "category": "madera",
+    "description": "Bisagras tipo europeo 35mm con ajuste en 3 ejes. Cierre suave incluido.",
+    "price": 38000,
+    "image": "assets/images/bisagras.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Tijeras de Podar con Trinquete",
+    "category": "jardineria",
+    "description": "Tijeras de poda con mecanismo trinquete para reducir esfuerzo. Hoja de acero SK-5.",
+    "price": 42000,
+    "image": "assets/images/tijeras-poda.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Manguera Reforzada 25m",
+    "category": "jardineria",
+    "description": "Manguera tricapa de PVC 1/2\" con pistola 8 funciones y conector rápido incluidos.",
+    "price": 78000,
+    "image": "assets/images/manguera.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Abono Orgánico 20kg",
+    "category": "jardineria",
+    "description": "Compost enriquecido con microorganismos benéficos. Mejora estructura y fertilidad del suelo.",
+    "price": 29000,
+    "image": "assets/images/abono.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Kit de Herramientas de Jardín x5",
+    "category": "jardineria",
+    "description": "Pala, rastrillo, azada, trasplantador y aflojador con mangos de madera. Estuche incluido.",
+    "price": 55000,
+    "image": "assets/images/kit-jardin.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Cerradura de Seguridad 3 Puntos",
+    "category": "seguridad",
+    "description": "Cerradura embutida con 3 puntos de anclaje y cilindro antigarrote. Incluye 5 llaves.",
+    "price": 135000,
+    "image": "assets/images/cerradura.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Cámara IP WiFi Exterior 1080p",
+    "category": "seguridad",
+    "description": "Cámara de vigilancia con visión nocturna 30m, detección de movimiento y almacenamiento en nube.",
+    "price": 185000,
+    "image": "assets/images/camara-ip.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Alarma Magnética para Puerta/Ventana",
+    "category": "seguridad",
+    "description": "Sensor de apertura con alarma 110dB. Batería de 12 meses. Instalación adhesiva sin tornillos.",
+    "price": 24000,
+    "image": "assets/images/alarma-magnetica.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Caja Fuerte Digital 30L",
+    "category": "seguridad",
+    "description": "Caja fuerte electrónica con teclado digital y llave de emergencia. Anclaje a pared incluido.",
+    "price": 320000,
+    "image": "assets/images/caja-fuerte.jpg"
+  }
+]
