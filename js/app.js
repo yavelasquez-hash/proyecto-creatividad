@@ -11,7 +11,7 @@ let activeCategory = null; // null = mostrar todos
 async function loadProducts() {
   try {
     console.log(PRODUCTS_URL)
-    const res  = await fetch(PRODUCTS_URL);
+    const res = await fetch(PRODUCTS_URL);
     console.log(res)
     allProducts = await res.json();
     renderProducts(allProducts);
@@ -22,7 +22,7 @@ async function loadProducts() {
 
 // ── Renderizado de tarjetas ──────────────────────────────────
 function renderProducts(products) {
-  const grid  = document.getElementById('productsGrid');
+  const grid = document.getElementById('productsGrid');
   const title = document.getElementById('categoryTitle');
 
   title.textContent = activeCategory
@@ -54,11 +54,19 @@ function renderProducts(products) {
         <!-- Cuerpo: descripción + precio + controles -->
         <div class="card-body d-flex flex-column">
           <p class="card-text text-muted small flex-grow-1">${p.description}</p>
-
           <div class="mt-3">
+
             <p class="product-price mb-2">
               $${p.price.toLocaleString('es-CO')}
             </p>
+
+            <!-- BOTÓN VER DETALLE -->
+            <button
+              class="btn btn-detail btn-sm w-100 mb-2"
+              onclick="openDetailModal(${p.id})"
+            >
+              <i class="bi bi-eye me-1"></i>Ver detalle
+            </button>
 
             <!-- Controles de cantidad -->
             <div class="qty-controls d-flex align-items-center gap-2">
@@ -83,6 +91,7 @@ function renderProducts(products) {
                 <i class="bi bi-cart-plus me-1"></i>Agregar
               </button>
             </div>
+
           </div>
         </div>
 

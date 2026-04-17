@@ -160,3 +160,26 @@ body {
 
 .btn-add-cart:hover   { opacity: .85; color: #fff; }
 .btn-add-cart:disabled { opacity: .6; }
+
+.btn-detail {
+  border: 2px solid #ff7a00; /* Naranja principal */
+  color: #ff7a00;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-detail:hover {
+  background-color: #ff7a00;
+  color: #ffffff;
+  border-color: #ff7a00;
+}
+
+.text-orange {
+  color: #ff7a00;
+}
+
+.modal-header {
+  background-color: var(--brand-dark);
+  color: #fff;
+  border-bottom: none;
+}
