@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — BricoMax</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Estilos adicionales para checkout ──────────────────── */
+    .checkout-container {
+      background-color: var(--brand-light);
+      min-height: 100vh;
+      padding: 2rem 0;
+    }
+
+    .checkout-header {
+      background-color: var(--brand-dark);
+      color: #fff;
+      padding: 1.5rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 3px solid var(--brand-primary);
+    }
+
+    .checkout-header .logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: .5px;
+    }
+
+    .checkout-header .logo i {
+      color: var(--brand-primary);
+      margin-right: .5rem;
+    }
+
+    .checkout-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── Tarjeta de resumen ────────────────────────────────── */
+    .checkout-card {
+      background: #fff;
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow-card);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .checkout-section-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--brand-dark);
+      border-left: 3px solid var(--brand-primary);
+      padding-left: .75rem;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* ── Tabla de productos ────────────────────────────────── */
+    #checkoutCartBody tr {
+      border-bottom: 1px solid #f0ece6;
+    }
+
+    #checkoutCartBody tr:last-child {
+      border-bottom: none;
+    }
+
+    .checkout-cart-table {
+      font-size: .95rem;
+    }
+
+    .checkout-cart-table th {
+      background-color: #f8f4ef;
+      border: none;
+      font-weight: 600;
+      color: var(--brand-dark);
+      padding: 1rem;
+    }
+
+    .checkout-cart-table td {
+      padding: 0.75rem 1rem;
+      vertical-align: middle;
+    }
+
+    /* ── Totales ────────────────────────────────────────────── */
+    .checkout-totals {
+      background-color: #f8f4ef;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .5rem 0;
+      font-size: .95rem;
+    }
+
+    .total-row.final {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      border-top: 2px solid #ddd;
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* ── Formulario de pago ────────────────────────────────── */
+    .form-group-checkout {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group-checkout label {
+      font-weight: 600;
+      color: var(--brand-dark);
+      margin-bottom: .5rem;
+      font-size: .95rem;
+    }
+
+    .form-group-checkout input,
+    .form-group-checkout select {
+      border: 1.5px solid #d1cdc7;
+      border-radius: 6px;
+      padding: .75rem 1rem;
+      font-size: .95rem;
+      transition: border-color .2s;
+    }
+
+    .form-group-checkout input:focus,
+    .form-group-checkout select:focus {
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 0.2rem rgba(232, 93, 4, 0.1);
+      outline: none;
+    }
+
+    .form-group-checkout input::placeholder {
+      color: var(--text-muted);
+    }
+
+    /* ── Card visual ────────────────────────────────────────── */
+    .card-preview {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: 'Courier New', monospace;
+    }
+
+    .card-preview-number {
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      margin-bottom: 2rem;
+    }
+
+    .card-preview-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .card-preview-name {
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+
+    .card-preview-expiry {
+      text-align: right;
+      font-size: .8rem;
+    }
+
+    .card-preview-expiry small {
+      display: block;
+      font-size: .65rem;
+      opacity: .7;
+    }
+
+    /* ── Botones ────────────────────────────────────────────── */
+    .btn-checkout {
+      background-color: var(--brand-primary);
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-weight: 600;
+      padding: .75rem 2rem;
+      transition: opacity .2s;
+    }
+
+    .btn-checkout:hover {
+      background-color: #d14902;
+      color: #fff;
+    }
+
+    .btn-checkout:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+
+    .btn-back-checkout {
+      color: var(--brand-primary);
+      border: 1.5px solid var(--brand-primary);
+      background: transparent;
+      border-radius: 7px;
+      font-weight: 600;
+      padding: .75rem 2rem;
+      transition: all .2s;
+    }
+
+    .btn-back-checkout:hover {
+      background-color: var(--brand-primary);
+      color: #fff;
+    }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .checkout-content {
+        padding: 0 1rem;
+      }
+
+      .checkout-card {
+        padding: 1rem;
+      }
+
+      .card-preview {
+        min-height: 160px;
+        padding: 1rem;
+      }
+
+      .card-preview-number {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER CHECKOUT ===== -->
+  <div class="checkout-header">
+    <div class="container-fluid px-4">
+      <div class="logo">
+        <i class="bi bi-tools"></i>BricoMax
+      </div>
+      <small class="text-white-50 d-block mt-2">
+        <i class="bi bi-shield-check"></i> Compra segura — Tu información está protegida
+      </small>
+    </div>
+  </div>
+
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <div class="checkout-container">
+    <div class="checkout-content">
+      <div class="row g-4">
+
+        <!-- ===== COLUMNA IZQUIERDA: Resumen del carrito ===== -->
+        <div class="col-lg-5">
+
+          <!-- Resumen de compra -->
+          <div class="checkout-card">
+            <div class="checkout-section-title">
+              <i class="bi bi-bag-check me-2"></i>Resumen de compra
+            </div>
+
+            <table class="table checkout-cart-table mb-0">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th style="width: 50px;">Cant.</th>
+                  <th style="width: 90px;">P. Unit</th>
+                  <th style="width: 90px;">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody id="checkoutCartBody">
+                <!-- Renderizado por checkout.js -->
+              </tbody>
+            </table>
+
+            <div class="checkout-totals">
+              <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="checkoutSubtotal">$0</span>
+              </div>
+              <div class="total-row">
+                <span>Envío:</span>
+                <span>Gratis</span>
+              </div>
+              <div class="total-row final">
+                <span>Total a pagar:</span>
+                <span id="checkoutTotal">$0</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ===== COLUMNA DERECHA: Formulario de pago ===== -->
+        <div class="col-lg-7">
+
+          <div class="checkout-form-section">
+
+            <!-- Datos del cliente -->
+            <div class="checkout-card">
+              <div class="checkout-section-title">
+                <i class="bi bi-person-circle me-2"></i>Información personal
+              </div>
+
+              <div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group-checkout">
+                      <label for="firstName">Nombre *</label>
+                      <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Juan" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group-checkout">
+                      <label for="lastName">Apellido *</label>
+                      <input type="text" id="lastName" name="lastName" class="form-control" placeholder="García" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group-checkout">
+                  <label for="email">Correo electrónico *</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="correo@ejemplo.com" required />
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group-checkout">
+                      <label for="phone">Teléfono *</label>
+                      <input type="tel" id="phone" name="phone" class="form-control" placeholder="+57 300 000 0000" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group-checkout">
+                      <label for="document">Documento de identidad *</label>
+                      <input type="text" id="document" name="document" class="form-control" placeholder="1234567890" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group-checkout">
+                  <label for="address">Dirección de entrega *</label>
+                  <input type="text" id="address" name="address" class="form-control" placeholder="Calle 123 #45-67" required />
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group-checkout">
+                      <label for="city">Ciudad *</label>
+                      <input type="text" id="city" name="city" class="form-control" placeholder="Bogotá" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group-checkout">
+                      <label for="postalCode">Código postal *</label>
+                      <input type="text" id="postalCode" name="postalCode" class="form-control" placeholder="110111" required />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Método de pago -->
+            <div class="checkout-card">
+              <div class="checkout-section-title">
+                <i class="bi bi-credit-card me-2"></i>Información de pago
+              </div>
+
+              <form id="checkoutForm">
+
+                <!-- Vista previa de la tarjeta -->
+                <div class="card-preview">
+                  <div class="card-preview-number" id="previewCardNumber">•••• •••• •••• ••••</div>
+                  <div class="card-preview-bottom">
+                    <div class="card-preview-name" id="previewCardName">Nombre Titular</div>
+                    <div class="card-preview-expiry">
+                      <small>Válida hasta</small>
+                      <span id="previewExpiry">MM/YY</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group-checkout">
+                  <label for="cardName">Nombre en la tarjeta *</label>
+                  <input type="text" id="cardName" name="cardName" class="form-control" placeholder="JUAN GARCIA" required 
+                    oninput="document.getElementById('previewCardName').textContent = this.value.toUpperCase() || 'NOMBRE TITULAR'" />
+                </div>
+
+                <div class="form-group-checkout">
+                  <label for="cardNumber">Número de tarjeta (16 dígitos) *</label>
+                  <input type="text" id="cardNumber" name="cardNumber" class="form-control" placeholder="0000 0000 0000 0000" maxlength="19" required 
+                    oninput="document.getElementById('previewCardNumber').textContent = this.value || '•••• •••• •••• ••••'" />
+                  <small class="text-muted d-block mt-1">Se formatea automáticamente cada 4 dígitos</small>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group-checkout">
+                      <label for="expiry">Vencimiento (MM/YY) *</label>
+                      <input type="text" id="expiry" name="expiry" class="form-control" placeholder="12/25" maxlength="5" required 
+                        oninput="document.getElementById('previewExpiry').textContent = this.value || 'MM/YY'" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group-checkout">
+                      <label for="cvv">CVV (3-4 dígitos) *</label>
+                      <input type="text" id="cvv" name="cvv" class="form-control" placeholder="123" maxlength="4" required />
+                      <small class="text-muted d-block mt-1">3 dígitos al reverso de tu tarjeta</small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="d-flex gap-3 mt-4">
+                  <button type="button" class="btn btn-back-checkout" onclick="goBackToCart()">
+                    <i class="bi bi-arrow-left me-1"></i>Volver al carrito
+                  </button>
+                  <button type="submit" class="btn btn-checkout flex-grow-1">
+                    <i class="bi bi-shield-check me-1"></i>Completar pago
+                  </button>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-dark text-white py-3 mt-5">
+    <div class="container-fluid px-4 text-center">
+      <small>© 2024 BricoMax — Tu tienda de bricolaje. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Función para volver al carrito
+    function goBackToCart() {
+      // Restaurar datos del carrito desde sessionStorage
+      const cartData = sessionStorage.getItem('cartData');
+      if (cartData) {
+        // Los datos ya están en sessionStorage, simplemente volver a index.html
+        window.location.href = './index.html';
+      } else {
+        window.location.href = './index.html';
+      }
+    }
+  </script>
+  <script src="js/checkout.js"></script>
+
+</body>
+</html>
