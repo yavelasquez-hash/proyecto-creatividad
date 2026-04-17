@@ -5,7 +5,7 @@
     "category": "herramientas",
     "description": "Martillo de acero forjado con mango ergonómico antideslizante. Ideal para clavar y extraer clavos.",
     "price": 18500,
-    "image": "assets/images/martillo.jpg"
+    "image": "assets/images/herramientas.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "category": "herramientas",
     "description": "Set de 6 destornilladores (plano y estrella) con puntas magnéticas y mangos bimateria.",
     "price": 32000,
-    "image": "assets/images/destornilladores.jpg"
+    "image": "assets/images/herramientas.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "category": "herramientas",
     "description": "Taladro eléctrico con función percusión, velocidad variable y mandril de 13mm. Incluye maletín.",
     "price": 189000,
-    "image": "assets/images/taladro.jpg"
+    "image": "assets/images/herramientas.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "category": "herramientas",
     "description": "Proyecta líneas horizontales y verticales con precisión de ±0.3mm/m. Alcance 15 metros.",
     "price": 95000,
-    "image": "assets/images/nivel-laser.jpg"
+    "image": "assets/images/herramientas.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "category": "electricidad",
     "description": "Cable de cobre sólido calibre 12 AWG con aislamiento PVC 600V. Rollo de 100 metros.",
     "price": 145000,
-    "image": "assets/images/cable-thw.jpg"
+    "image": "assets/images/electricidad.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "category": "electricidad",
     "description": "Caja distribución con barra de neutros y tierra, para 12 breakers. Incluye puerta metálica.",
     "price": 87000,
-    "image": "assets/images/tablero.jpg"
+    "image": "assets/images/electricidad.jpg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "category": "electricidad",
     "description": "Tomacorriente dual 110V/15A con 2 puertos USB integrados de 2.1A. Fácil instalación.",
     "price": 28000,
-    "image": "assets/images/tomacorriente.jpg"
+    "image": "assets/images/electricidad.jpg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "category": "electricidad",
     "description": "Mide voltaje AC/DC, corriente, resistencia y continuidad. Pantalla retroiluminada.",
     "price": 54000,
-    "image": "assets/images/multimetro.jpg"
+    "image": "assets/images/electricidad.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "category": "fontaneria",
     "description": "Llave ajustable de acero cromo-vanadio, apertura máxima 30mm. Acabado pulido anticorrosión.",
     "price": 22000,
-    "image": "assets/images/llave-inglesa.jpg"
+    "image": "assets/images/fontaneria.jpg"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "category": "fontaneria",
     "description": "Set de 3 llaves stilson (10\", 14\", 18\") para tuberías de hasta 2 pulgadas de diámetro.",
     "price": 68000,
-    "image": "assets/images/llaves-tuberia.jpg"
+    "image": "assets/images/fontaneria.jpg"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "category": "fontaneria",
     "description": "Cinta PTFE de 12mm x 10m. Sello hermético para roscas de tuberías de agua y gas.",
     "price": 12000,
-    "image": "assets/images/teflon.jpg"
+    "image": "assets/images/fontaneria.jpg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "category": "fontaneria",
     "description": "Flexible cromado con conexiones universales 1/2\". Alta resistencia a la presión y doblado.",
     "price": 19500,
-    "image": "assets/images/flexible-ducha.jpg"
+    "image": "assets/images/fontaneria.jpg"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "category": "pintura",
     "description": "Pintura para interiores de alta cubrición. Rendimiento aprox. 10m²/L en dos manos. Lavable.",
     "price": 48000,
-    "image": "assets/images/pintura-blanca.jpg"
+    "image": "assets/images/pintura.jpg"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "category": "pintura",
     "description": "Kit rodillo de lana corta para superficies lisas. Incluye bandeja plástica con rejilla.",
     "price": 21000,
-    "image": "assets/images/rodillo.jpg"
+    "image": "assets/images/pintura.jpg"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "category": "pintura",
     "description": "Set de brochas (1\", 2\", 3\") con cerdas naturales. Mango de madera barnizado.",
     "price": 15000,
-    "image": "assets/images/brochas.jpg"
+    "image": "assets/images/pintura.jpg"
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "category": "pintura",
     "description": "Pack 10 pliegos de lija al agua grano 120. Apta para madera, metal y masilla.",
     "price": 9800,
-    "image": "assets/images/lija.jpg"
+    "image": "assets/images/pintura.jpg"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "category": "madera",
     "description": "Tablón de madera pino pátula cepillada, seca al horno. Ideal para muebles y estructuras.",
     "price": 35000,
-    "image": "assets/images/tablon-pino.jpg"
+    "image": "assets/images/madera.jpg"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "category": "madera",
     "description": "Lámina de triplay con cara fenólica resistente a humedad. Uso en encofrado y pisos.",
     "price": 125000,
-    "image": "assets/images/triplay.jpg"
+    "image": "assets/images/madera.jpg"
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "category": "madera",
     "description": "Cola vinílica de alta resistencia para uniones de madera. Tiempo de fraguado 30 min.",
     "price": 16500,
-    "image": "assets/images/cola-madera.jpg"
+    "image": "assets/images/madera.jpg"
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "category": "madera",
     "description": "Bisagras tipo europeo 35mm con ajuste en 3 ejes. Cierre suave incluido.",
     "price": 38000,
-    "image": "assets/images/bisagras.jpg"
+    "image": "assets/images/madera.jpg"
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "category": "jardineria",
     "description": "Tijeras de poda con mecanismo trinquete para reducir esfuerzo. Hoja de acero SK-5.",
     "price": 42000,
-    "image": "assets/images/tijeras-poda.jpg"
+    "image": "assets/images/jardineria.jpg"
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "category": "jardineria",
     "description": "Manguera tricapa de PVC 1/2\" con pistola 8 funciones y conector rápido incluidos.",
     "price": 78000,
-    "image": "assets/images/manguera.jpg"
+    "image": "assets/images/jardineria.jpg"
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "category": "jardineria",
     "description": "Compost enriquecido con microorganismos benéficos. Mejora estructura y fertilidad del suelo.",
     "price": 29000,
-    "image": "assets/images/abono.jpg"
+    "image": "assets/images/jardineria.jpg"
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "category": "jardineria",
     "description": "Pala, rastrillo, azada, trasplantador y aflojador con mangos de madera. Estuche incluido.",
     "price": 55000,
-    "image": "assets/images/kit-jardin.jpg"
+    "image": "assets/images/jardineria.jpg"
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "category": "seguridad",
     "description": "Cerradura embutida con 3 puntos de anclaje y cilindro antigarrote. Incluye 5 llaves.",
     "price": 135000,
-    "image": "assets/images/cerradura.jpg"
+    "image": "assets/images/seguridad.jpg"
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@
     "category": "seguridad",
     "description": "Cámara de vigilancia con visión nocturna 30m, detección de movimiento y almacenamiento en nube.",
     "price": 185000,
-    "image": "assets/images/camara-ip.jpg"
+    "image": "assets/images/seguridad.jpg"
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "category": "seguridad",
     "description": "Sensor de apertura con alarma 110dB. Batería de 12 meses. Instalación adhesiva sin tornillos.",
     "price": 24000,
-    "image": "assets/images/alarma-magnetica.jpg"
+    "image": "assets/images/seguridad.jpg"
   },
   {
     "id": 28,
@@ -221,6 +221,6 @@
     "category": "seguridad",
     "description": "Caja fuerte electrónica con teclado digital y llave de emergencia. Anclaje a pared incluido.",
     "price": 320000,
-    "image": "assets/images/caja-fuerte.jpg"
+    "image": "assets/images/seguridad.jpg"
   }
 ]
