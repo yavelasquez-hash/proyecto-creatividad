@@ -1,0 +1,57 @@
+body{
+background:#f4f6f8;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.stat-card{
+border:none;
+border-radius:14px;
+padding:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:0.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-4px);
+}
+
+.stat-card h6{
+color:#666;
+margin-bottom:10px;
+font-size:14px;
+}
+
+.stat-card h3{
+font-weight:800;
+color:#ff7a00;
+}
+
+.card{
+border:none;
+border-radius:16px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+table th{
+font-size:14px;
+color:#666;
+}
+
+table td{
+vertical-align:middle;
+font-weight:500;
+}
+
+.navbar{
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+canvas{
+width:100% !important;
+height:320px !important;
+display:block;
+}
+
+.card canvas{
+min-height:320px;
+}
